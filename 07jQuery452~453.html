@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>452~453page</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            border: 1px solid #333;
+        }
+
+        li {
+            color: white;
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(":header").css("background", "greenyellow");
+            $("td:first").css("background", "yellow");
+            $("tr:even").css("background", "red");
+            $("tr:odd").css("background", "orange");
+            $("td:last").css("background", "green");
+            $("li:lt(3)").css("border", "4px solid gray");//lt(less than)
+            $("li:eq(0)").css("background", "navy"); //eq(equal)
+            $("li:gt(0)").css("background", "purple");//gt(great than)
+            $(":root").css("background", "lightgray");
+            (function upDown() {
+                $("h2").slideToggle(2000, upDown);
+            })();
+            $(":animated").css("border", "4px solid darkred");
+        });
+    </script>
+</head>
+
+<body>
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+    <table>
+        <caption>기본 필터 선택자</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul>
+        <li class="bg">내용1</li>
+        <li class="bg">내용2</li>
+        <li class="bg">내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+
+</html>

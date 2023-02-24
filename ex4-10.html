@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>탐색 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        * {
+            margin: 5px;
+            font-size: 20pt;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#m1").children().css("border", "2px solid red");
+            $("#m2").children().children("span").css("border", "2px solid orange");
+            $("#m3 span").closest("div").css("border", "2px solid yellow");
+            $("#m4 > span.m").nextUntil("em").css("border", "2px solid green");
+            $("#m5 > span").filter(".m").css("border", "2px solid blue");
+            $("#m6 > div").has("span").css("border", "2px solid navy");
+        });
+    </script>
+</head>
+
+<body>
+    <h2>463페이지 탐색선택자</h2><br>
+    <div id="m1">
+        <a href="#">a태그1_1</a>
+        <span>span1_2</span>
+    </div>
+    <div id="m2">
+        <div>
+            <a href="#">a태그2_1</a>
+            <span>span2_2</span>
+        </div>
+    </div>
+    <div id="m3">
+        <div><span>div안 span3_1</span></div>
+    </div>
+    <div id="m4">
+        <span class="m">span4_1</span>
+        <span>span4_2</span>
+        <span>span4_3</span>
+        <em>내용4_4</em>
+    </div>
+    <div id="m5">
+        <span class="m">span5_1</span>
+        <span>span5_2</span>
+        <span>span5_3</span>
+    </div>
+    <div id="m6">
+        <div><span>div안 span6_1</span></div>
+        <div>div6_2</div>
+    </div>
+</body>
+
+</html>

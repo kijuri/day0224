@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>448page</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        * {
+            font-size: 16pt;
+            margin: 5px;
+        }
+    </style>
+    <!-- <script src="jquery-3.3.1.min.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            $('.logo').css('border', '4px solid yellow');
+            $('div.util').css('border', '4px solid pink');
+            $('#gnb').css('border', '4px solid orange');
+            $('#gnb ul').css('border', '4px solid blue');
+            $('#gnb > ul > li').css('border', '4px solid green');
+            $('p').css('border', '4px solid red');
+            $('#visual + #content').css('border', '4px solid navy');
+            $('.left,.right,#banner').css('border', '4px solid gray');
+            $('#visual ~ #footer').css('border', '4px solid purple');
+        });
+    </script>
+</head>
+
+<body>
+    <h2>448page</h2>
+
+    <header id="header">
+        <div class="logo">로고</div> <!--yellow-->
+        <div class="util">회원가입</div> <!--pink-->
+        <nav id="gnb"> <!--blue-->
+            <ul>
+                <li>메뉴1 <!--green-->
+                    <ul>
+                        <li>메뉴1_1</li> <!--blue-->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="visual"> <!--navy-->
+            <p>비주얼</p> <!--red-->
+        </div>
+        <div id="content"> <!--navy-->
+            <div class="left">왼쪽</div> <!--grey-->
+            <div class="right">
+                <div class="util">오른쪽</div> <!--pink-->
+            </div>
+        </div>
+        <div id="banner">배너</div> <!--grey-->
+        <footer id="footer">푸터꼬리</footer> <!--purple-->
+    </header>
+</body>
+
+</html>
